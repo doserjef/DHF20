@@ -1,0 +1,43 @@
+seed 1
+n.iter 1000
+n.batch 25
+n.chain 1
+n.threads 1
+outfile alpha
+
+n.locations 18
+n.day 3
+n.time 29
+n.spline 5
+n.phi 1
+
+x.file ../../data/roadCovariate,1566,1
+y.file ../../data/alpha,1566,1
+
+# Beta Spline coefficients
+beta.tuning 0.01,0.01,0.05,0.05,0.05
+beta.starting 0,0,0,0,0
+beta.mu 0,0,0,0,0
+beta.sd 10000,10000,10000,10000,10000
+
+# Phi Precision Parameter
+phi.tuning 0.1
+phi.starting 5000
+phi.a 2
+phi.b 20000
+
+# Lamdbda inverse wishart random effects
+lambda.tuning 0.1,0.1,0.1,0.1,0.1,0.1
+lambda.starting 5,0,0,5,0,1
+lambda.df 3
+lambda.scale.diag 0.1,0.1,0.1
+
+# Rho Correlation Coefficient
+rho.tuning 0.1
+rho.starting 0.8
+rho.a 0.01
+rho.b 1
+
+# W Random Effects
+w.tuning 0.1
+

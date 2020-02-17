@@ -1,0 +1,43 @@
+seed 1
+n.iter 100
+n.batch 25
+n.chain 1
+n.threads 1
+outfile beta
+
+n.locations 54
+n.time 29
+n.spline 8
+n.phi 1
+
+x.file ../new-technophony/alpha-samples-post-burn,1566,22500
+# x.file ../../data/alpha,1566,1
+y.file ../../data/beta,1566,1
+
+# Beta Spline coefficients
+beta.tuning 0.01,0.05,0.05,0.05,0.05,0.05,0.05,0.05
+beta.starting -.84,-.66,-.63,-1.32,-1.51,-2.62,-3.3,-4.37
+beta.mu 0,0,0,0,0,0,0,0
+beta.sd 10000,10000,10000,10000,10000,10000,10000,10000
+
+# Phi Precision
+phi.tuning 0.1
+phi.starting 1000
+phi.a 2
+phi.b 2000
+
+# Sigma^2 Random Effect Variance
+sigma.sq.tuning 0.1
+sigma.sq.starting 1
+sigma.sq.a 2
+sigma.sq.b 2
+
+# Rho Correlation Coefficient
+rho.tuning 0.1
+rho.starting 0.8
+rho.a 0.1
+rho.b 1
+
+# W Random Effects
+w.tuning 0.1
+

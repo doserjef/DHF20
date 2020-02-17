@@ -1,0 +1,45 @@
+seed 1
+n.iter 1000
+n.batch 25
+n.chain 3
+n.threads 1
+outfile alpha
+
+n.locations 54
+n.time 29
+n.spline 5
+n.phi 1
+
+spline.min 0.0
+spline.max 4.0
+
+x.file ../../data/roadCovariate,1566,1
+y.file ../../data/alpha,1566,1
+
+# Beta Spline coefficients
+beta.tuning 0.02,0.02,0.01,0.02,0.01
+beta.starting -1,-1,-1,-1,-1
+beta.mu 0,0,0,0,0
+beta.sd 10000,10000,10000,10000,10000
+
+# Phi Precision Parameter
+phi.tuning 0.1
+phi.starting 1000
+phi.a 2
+phi.b 20000
+
+# Sigma^2 Random Effect Variance
+sigma.sq.tuning 0.1
+sigma.sq.starting 5
+sigma.sq.a 2
+sigma.sq.b 5
+
+# Rho Correlation Coefficient
+rho.tuning 0.1
+rho.starting 0.5
+rho.a 0.01
+rho.b 1
+
+# W Random Effects
+w.tuning 0.04
+
